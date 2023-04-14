@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code-compiler| Your one stop code compiler</title>
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,600;1,700&family=Merriweather&family=Montserrat:wght@100;400;700;900&family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&family=Sacramento&family=Satisfy&family=Slabo+27px&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mediaquery.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    
+    <h2 class="head">CODE-Editor</h2>
+    <div class="home">
+        <!-- First portion -->
+        <div class="editor" id="editor"></div>
+
+        <!-- Second portion -->
+        <div class="IO-area">
+            <div class="input">
+                <div class="input-navbar">
+
+                    <select class="selectBox language" id="language" name="language" onchange="changeLanguage()">
+                        SELECT LANGUAGE:
+                        <option selected>Language</option>
+                        &nbsp;&nbsp;
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="cs">C#</option>
+                        <option value="java">Java</option>
+                        <option value="py">Python</option>
+                        <option value="go">GOlang</option>
+                        <option value="js">JavaScript</option>
+                    </select>
+                    <select class="selectBox changeTheme" id="changeTheme" name="changeTheme" onchange="changeTheme()">
+                        SELECT THEME:
+                        &nbsp;&nbsp;
+                        <option selected>Themes</option>
+                        <option value="ambiance">Ambiance</option>
+                        <option value="chaos">Chaos</option>
+                        <option value="chrome">Chrome</option>
+                        <option value="cobalt">Cobalt</option>
+                        <option value="dracula">Dracula</option>
+                        <option value="eclipse">Eclipse</option>
+                        <option value="github">GitHub</option>
+                        <option value="twilight">Twilight</option>
+                        <option value="xcode">Xcode</option>
+                        <option value="sql">SQL Server</option>
+                    </select>
+                    <select class="selectBox fontSize" id="fontSize" name="fontSize" onchange="changeFontSize()">
+                        SELECT FONTSIZE:
+                        &nbsp;&nbsp;
+                        <option selected>Font Size</option>
+                        <option value="9">9px</option>
+                        <option value="10">10px</option>
+                        <option value="15">15px</option>
+                        <option value="18">18px</option>
+                        <option value="22">22px</option>
+                        <option value="25">25px</option>
+                    </select>
+                </div>
+                <div class="input-body">
+                    <h2>INPUT</h2>
+                    <textarea spellcheck="false" id="input"></textarea>
+                    <button  onclick="exec()">RUN</button>
+                </div>
+                <!-- <div class="button-container">
+                    </div> -->
+            </div>
+            <div class="output">
+                <h2>OUTPUT</h2>
+                <textarea spellcheck="false" id="outputTextArea"></textarea>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
